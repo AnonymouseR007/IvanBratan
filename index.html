@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ivan Hudak Photo und Video</title>
+    <link rel="stylesheet" href="style.css" class="style" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="brand">IVAN HUDAK AKA BRATAN</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#" id="nav-link-0">Home</a>
+          <a href="#" id="nav-link-1">Videomaking</a>
+          <a href="#" id="nav-link-2">Hochzeit</a>
+          <a href="#" id="nav-link-3">Musikproduction</a>
+        </div>
+      </div>
+    </header>
+    <section class="home">
+      <video src="jet.mp4" class="video-slide active" autoplay muted loop></video>
+      <video src="ghe.mp4" class="video-slide" autoplay muted loop></video>
+      <video src="33.mp4" class="video-slide" autoplay muted loop></video>
+      <video src="22.mp4" class="video-slide" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Ivan Hudak<br /><span>AKA Bratan</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto soluta
+          sint ratione hic repellendus sit magni aliquid amet asperiores
+          exercitationem possimus praesentium perferendis tempora itaque
+          officiis rem, ea, dignissimos autem, veniam expedita? Quas corporis
+          harum quaerat placeat in sit similique!
+        </p>
+        <a href="#">MEHR</a>
+      </div>
+      <div class="content">
+        <h1>Video<br /><span>Making</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto soluta
+          sint ratione hic repellendus sit magni aliquid amet asperiores
+          exercitationem possimus praesentium perferendis tempora itaque
+          officiis rem, ea, dignissimos autem, veniam expedita? Quas corporis
+          harum quaerat placeat in sit similique!
+        </p>
+        <a href="#">MEHR</a>
+      </div>
+      <div class="content">
+        <h1>Hochzeiten<br /><span></span></h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto soluta
+          sint ratione hic repellendus sit magni aliquid amet asperiores
+          exercitationem possimus praesentium perferendis tempora itaque
+          officiis rem, ea, dignissimos autem, veniam expedita? Quas corporis
+          harum quaerat placeat in sit similique!
+        </p>
+        <a href="#">MEHR</a>
+      </div>
+      <div class="content">
+        <h1>MusikProduktion<br /><span></span></h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto soluta
+          sint ratione hic repellendus sit magni aliquid amet asperiores
+          exercitationem possimus praesentium perferendis tempora itaque
+          officiis rem, ea, dignissimos autem, veniam expedita? Quas corporis
+          harum quaerat placeat in sit similique!
+        </p>
+        <a href="#">MEHR</a>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-spotify"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      //Navigation menu//
+
+const menuBtn = document.querySelector(".menu-btn");
+const navigation = document.querySelector(".navigation");
+const navLinks = document.querySelectorAll(".navigation-items a");
+
+navLinks.forEach((link, i) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    sliderNav(i);
+
+    // Hide menu on mobile
+    if (menuBtn.classList.contains("active")) {
+      menuBtn.classList.remove("active");
+      navigation.classList.remove("active");
+    }
+  });
+});
+
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("active");
+  navigation.classList.toggle("active");
+});
+
+//Video slider//
+const btns = document.querySelectorAll(".nav-btn");
+const slides = document.querySelectorAll(".video-slide");
+const contents = document.querySelectorAll(".content");
+
+function sliderNav(index) {
+  btns.forEach((btn) => btn.classList.remove("active"));
+  slides.forEach((slide) => slide.classList.remove("active"));
+  contents.forEach((content) => content.classList.remove("active"));
+
+  btns[index].classList.add("active");
+  slides[index].classList.add("active");
+  contents[index].classList.add("active");
+}
+
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i);
+        });
+      });
+    </script>
+  </body>
+</html>
