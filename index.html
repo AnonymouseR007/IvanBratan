@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ivan Hudák Photo und Video</title>
+    <link rel="stylesheet" href="style.css" class="style" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="brand"><span class="typed-text"></span><span class="cursor"></span></a>
+      <!-- <div class="menu-btn"> -->
+        <button class="hamburger">
+          <div class="bar"></div>
+        </button>
+        <nav class="mobile-nav">
+          <a href="#" id="nav-link-0">Home</a>
+          <a href="#" id="nav-link-1">Angebote</a>
+          <a href="#" id="nav-link-2">Was ich gemacht habe</a>
+          <a href="#" id="nav-link-3">Kontakt</a>
+        </nav>
+        <div class="navigation">
+          <nav class="navigation-items">
+            <a href="#" id="nav-link-0">Home</a>
+            <a href="#" id="nav-link-1">Angebote</a>
+            <a href="#" id="nav-link-2">Was ich gemacht habe</a>
+            <a href="#" id="nav-link-3">Kontakt</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mail form -->
+    <img src="mail.png" class="chatOn">
+    <div class="wrapper">
+      <form id="contactForm">
+        <i class="fa-solid fa-circle-xmark close"></i>
+        <h2>Schreib mir email</h2>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <p id="name_error" class="error"></p>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        <p id="email_error" class="error"></p>
+
+        <label for="phone">Phone nummer</label>
+        <input type="tel" id="phone" name="phone" placeholder="Optional: Enter your phone number">
+        <p id="phone_error" class="error"></p>
+
+        <label for="message">Nachricht</label>
+        <textarea name="message" id="message" cols="30" rows="5" required placeholder="Enter your message"></textarea>
+        <p id="message_error" class="error"></p>
+
+        <button type="submit">SENDEN</button>
+      </form>
+    </div>
+
+    <section class="home">
+      <video autoplay muted loop playsinline src="jet.mp4" class="video-slide active"></video>
+      <video autoplay muted loop playsinline src="ghe.mp4" class="video-slide"></video>
+      <video autoplay muted loop playsinline src="33.mp4" class="video-slide"></video>
+      <video autoplay muted loop playsinline src="22.mp4" class="video-slide"></video>
+      <main class="content active">
+        <h1 >Ivan Hudák<br /><span>AKA Bratan</span></h1>
+        <p>
+          Ich bin ein Fotograf und Videograf aus der Slowakei. Ich habe mich auf Hochzeiten, Porträts und Musikvideos spezialisiert. Ich liebe es, die Schönheit der Welt durch meine Linse zu sehen und sie mit anderen zu teilen. Ich bin hier, um Ihre Visionen zu verwirklichen und sie für immer zu machen.
+        </p>
+      </main>
+      <div class="content">
+        <h1>Meine<br /><span>angebot</span></h1>
+        <p>
+          <ul>
+            <li>Porträts</li>
+            <li>Hochzeiten</li>
+            <li>Musikvideos</li>
+            <li>Produktfotografie</li>
+            <li>und mehr</li>
+          </ul>
+        </p>
+      </div>
+      <div class="content">
+        <h1>Projekte<br /><span>fur euch gemacht!</span></h1>
+        <p>
+          <!-- There should be gallery with representative photos and videos with description and link to project if it is public, design creative and interesting -->
+          Galeria s reprezentacnimi fotkami a videami s popisom a linkom na projekt ak je verejne dostupne, dizajnovo kreativne a zaujimave
+        </p>
+      </div>
+      <div class="content">
+        <h1>kontakt<br /><span>am bestens gerade jetzt</span></h1>
+        <p>
+          <!-- There should be email form same as in wrapper just displayed directly here and next to it button for calling and message on whats app <br> in case google map with location under it -->
+          mailovy formular rovanky ako vo wrapper akurat zobrazeny priamo tu a vedla neho tlacitko pre telefonovanie a spravu na whats app <br> pripade google mapka s polohou pod tym
+        </p>
+      </div>
+      <div class="media-icons">
+        <a href="https://www.facebook.com/Jewan28" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/h.e.k.t.o.r.28/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="https://open.spotify.com/artist/4q5dCq8XeUVm9nZX2QsnPH" target="_blank" rel="noopener noreferrer"><i class="fab fa-spotify"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>   
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
